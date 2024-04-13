@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" );
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+*{ /* custom of the fault design*/
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font-family: 'Bubblegum-sans',sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.magic{
+    background-color: #7434CA;
+    color: #fff;
+    font-family:'Noto-sans',sans-serif;
+    border: 0; /*--Remove the box and sections insides */
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 3px #BD93F6;
+    z-index: 100;
+}
+.magic:focus{
+    box-shadow: none;
+    transform: translateY(2px);
+}
+.magic:active{
+    box-shadow: none;
+    transform:translateY(2px);
+}
+.boxes{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    transition: 0.4s ease;
+}
+.boxes.big{
+    width: 600px;
+    height: 600px;
+}
+.boxes.big.box{
+    transform: rotateZ('360deg'); /*Resize the angle*/
+}
+.box{
+    background-image:url("https://www.savoredjourneys.com/wp-content/uploads/2015/08/abu-dhabi-city-guide-feature.jpg");
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    position: relative;
+    height: 125px;
+    width: 125px;
+    transition: 0.4s ease;
+}
+.box::after{
+    content: '';
+    background-color: #54B0FC;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    transform: skewY(45deg);
+}
+.box::before{
+    content: '';
+    background-color: transparent;
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    height: 15px;
+    width: 100%;
+    transform: skewY(45deg);
+}
